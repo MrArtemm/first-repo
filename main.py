@@ -1,16 +1,30 @@
-9# This is a sample Python script.
+class human:
+    def __init__(self, energy, maxspeed):
+        self.energy = energy
+        self.maxspeed = maxspeed
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def refuel(self, amount):
+            self.energy += amount
 
+    def walk(self):
+        if self.energy > 0:
+            print('Walking')
+            self.energy -=1
+        else:
+            print('He is tired')
 
-def print_hi(teacher):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {teacher}')  # Press Ctrl+F8 to toggle the breakpoint.
+Artem = human(35, 15)
+print(Artem.energy)
+print(Artem.maxspeed)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Andrii = human(40, 15)
+print(Andrii.energy)
+print(Andrii.maxspeed)
+print('---------------------')
+print(Artem.energy)
+Artem.refuel(20)
+print(Artem.energy)
+print('---------------------')
+print(Andrii.energy)
+Andrii.walk()
+print(Andrii.energy)

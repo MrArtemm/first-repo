@@ -1,7 +1,7 @@
 def checker(x):
     if type(x) != int:
         raise TypeError('Please, we need INT')
-a = 'dog'
+a = 'cat'
 try:
     checker(a)
 except TypeError:
